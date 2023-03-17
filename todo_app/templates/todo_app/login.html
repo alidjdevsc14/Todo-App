@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h3>Login Page</h3>
+<div>
+    <div>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input value="Login" type="submit" onclick="location.href='{% url "index" %}'">
+        </form>
+    </div>
+    </div>
+
+{% endblock %}
